@@ -1,0 +1,20 @@
+@layer reset, base;
+
+@import url('reset.css') layer(reset);
+@import url('style.css') layer(base);
+
+body {
+    background-color: #E9E6E7;
+}
+
+nav {
+    background-color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+}
+
+:root {
+    --primary-color: #5E5653;
+}

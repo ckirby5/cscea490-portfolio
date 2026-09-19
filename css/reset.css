@@ -1,0 +1,64 @@
+/* 1. Put the entire reset in a low-priority cascade layer */
+@layer reset {
+  /* 2. Box-sizing harmony & repeat prevention */
+  *, *::before, *::after {
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+  }
+
+  /* 3. Remove accidental default spacing */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* 4. Core root and body settings */
+  html {
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-block-size: 100%;
+  }
+
+  body {
+    min-height: 100vh;
+    min-height: 100dvh; /* Dynamic viewport height for mobile */
+  }
+
+  /* 5. Typography enhancements */
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance; /* Prevents awkward single-word lines on headings */
+  }
+
+  p, li {
+    text-wrap: pretty; /* Prevents lonely single words (orphans) at the end of text */
+    max-width: 75ch;   /* Keeps reading lines comfortable and accessible */
+  }
+
+  /* 6. Smooth scroll ONLY when users don't mind motion */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  /* 7. Make media responsive and fix inline gaps */
+  img, svg, video, canvas {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* 8. Make form elements look like real text elements */
+  input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+    letter-spacing: inherit;
+  }
+
+  /* 9. Handle default dark/light modes cleanly */
+  :root {
+    color-scheme: light dark;
+  }
+}
