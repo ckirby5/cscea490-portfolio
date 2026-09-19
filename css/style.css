@@ -53,6 +53,31 @@ a:hover, a:active {
     text-decoration: underline;
 }
 
+table {
+    min-width: 450px;
+}
+
+th, td {
+    text-align: left;
+    padding: 0.5rem;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+.container {
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 400px) {
+    .nav-list {
+        flex-direction: column;
+    }
+}
 
 :root {
     --primary-color: #5E5653;
