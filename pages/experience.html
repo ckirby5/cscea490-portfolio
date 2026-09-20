@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/experience.js" defer></script>
         <title>Christian Kirby Experience</title>
     </head>
     <body>
@@ -21,7 +22,7 @@
         </nav>
         <main>
             <div class="container" role="region" aria-label="Scrollable table: Professional Experience" tabindex="0">
-                <table>
+                <table class="experience-table" role="table" aria-label="Professional Experience">
                     <caption>Professional Experience</caption>
                     <thead>
                         <tr>
@@ -31,20 +32,62 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>U.S Navy</td>
+                        <tr class="role-information" onclick="toggleRow(this)" role="row" aria-expanded="false" tabindex="0">
+                            <td>
+                                <span class="company-arrow" aria-hidden="true">&#9654;</span> U.S. Navy
+                            </td>
                             <td>Yeoman</td>
                             <td>2009 - 2016</td>
                         </tr>
-                        <tr>
-                            <td>Moser Consulting</td>
+                        <tr class="detail-information">
+                            <td colspan="3">
+                                <div class="role-description">
+                                    <div class="role-content">
+                                        <p>Performed administrative and clerical duties, including managing correspondence, records, and reports.</p>
+                                        <p>Assisted in the preparation of official documents and maintained accurate records.</p>
+                                        <p>Provided support to various departments and personnel within the organization.</p>
+                                        <p>Demonstrated strong organizational and communication skills in a fast-paced environment.</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="role-information" onclick="toggleRow(this)" role="row" aria-expanded="false" tabindex="0">
+                            <td>
+                                <span class="company-arrow" aria-hidden="true">&#9654;</span> Moser Consulting
+                            </td>
                             <td>Software Engineer</td>
                             <td>2018 - 2026</td>
                         </tr>
-                        <tr>
-                            <td>Imaging Associates</td>
+                        <tr class="detail-information">
+                            <td colspan="3">
+                                <div class="role-description">
+                                    <div class="role-content">
+                                        <p>Developed and maintained web applications using modern frameworks and technologies.</p>
+                                        <p>Collaborated with cross-functional teams to deliver high-quality software solutions.</p>
+                                        <p>Implemented best practices for code quality, testing, and deployment.</p>
+                                        <p>Provided technical support and troubleshooting for clients.</p>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="role-information" onclick="toggleRow(this)" role="row" aria-expanded="false" tabindex="0">
+                            <td>
+                                <span class="company-arrow" aria-hidden="true">&#9654;</span> Imaging Associates
+                            </td>
                             <td>Full Stack Developer</td>
                             <td>2026 - Present</td>
+                        </tr>
+                        <tr class="detail-information">
+                            <td colspan="3">
+                                <div class="role-description">
+                                    <div class="role-content">
+                                        <p>Designing and developing web applications with a focus on user experience and performance.</p>
+                                        <p>Integrating third-party APIs and services to enhance application functionality.</p>
+                                        <p>Collaborating with designers and stakeholders to implement new features and improvements.</p>
+                                        <p>Maintaining and updating existing applications to ensure security and compatibility.</p>
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

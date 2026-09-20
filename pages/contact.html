@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/style.css">
+        <script src="../js/contact.js" defer></script>
         <title>Christian Kirby Contact</title>
     </head>
     <body>
@@ -24,8 +25,14 @@
             <p>I am always looking to connect with like-minded individuals or potential collaborators.
                 If you have some cool idea or project that you think I would be interested in, or if you simply wanted to 
                 say hello, feel free to reach out to me through any of the following methods:</p>
-            <ul>
-                <li><a href="mailto:christian.h.kirby@gmail.com">Email</a></li>
+            <ul class="contact-list">
+                <li>
+                    <a href="mailto:christian.h.kirby@gmail.com">Email</a>
+                <button id="copy-email" aria-label="Copy email address" class="email-item" type="button">
+                    <span class="material-symbols-outlined" aria-hidden="true">content_copy</span>
+                </button>                    
+                <span id="email-copied" aria-live="polite"></span>
+                </li>
                 <li><a href="https://discordapp.com/users/216577690138968065" target="_blank">Discord</a></li>
                 <li><a href="https://github.com/ckirby5" target="_blank">GitHub</a></li>
             </ul>

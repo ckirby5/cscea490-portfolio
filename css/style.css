@@ -1,6 +1,7 @@
 @layer reset;
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined');
 
 @import url('reset.css') layer(reset);
 
@@ -9,12 +10,24 @@ body {
     color: var(--primary-color);
     font-family: var(--font);
     font-size: var(--font-size-body);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: var(--space-lg);
+}
+
+main {
+    flex: 1;
+    padding: var(--space-md);
 }
 
 nav {
     background-color: var(--primary-color);
     color: var(--background-color);
     font-weight: var(--font-weight-nav);
+    padding: var(--space-md);
 }
 
 nav a:link,
@@ -31,6 +44,7 @@ footer {
     background-color: var(--primary-color);
     color: var(--background-color);
     font-weight: var(--font-weight-footer);
+    padding: var(--space-sm);
 }
 
 h1 {
@@ -72,6 +86,10 @@ th, td {
     padding: 0.5rem;
 }
 
+li {
+    list-style: none;
+}
+
 .nav-list {
     list-style: none;
     padding: 0;
@@ -83,9 +101,98 @@ th, td {
     overflow-x: auto;
 }
 
+.experience-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.experience-table th, .experience-table td {
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem;
+}
+
+.detail-information td{
+    padding: 0;
+    border-top: none;
+}
+
+.role-information {
+    cursor: pointer;
+    user-select: none;
+}
+
+.role-information:focus-visible {
+    background-color: var(--link-color-hover);
+    color: var(--primary-color);
+}
+
+.company-arrow {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+
+.role-information.open .company-arrow {
+    transform: rotate(90deg);
+}
+
+.role-description {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    background-color: var(--background-color);
+}
+
+.role-information.open + .detail-information .role-description {
+    max-height: 500px;
+    opacity: 1;
+    padding: 0.5rem;
+}
+
+.role-content {
+    padding: 0.5rem 0;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.email-item {
+    padding: 0.2rem 0.35rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--link-color);
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.email-item .material-symbols-outlined {
+    font-size: 1.1rem;
+}
+
+.email-item:hover,
+.email-item:focus {
+    color: var(--primary-color);
+}
+
 @media screen and (max-width: 400px) {
     .nav-list {
         flex-direction: column;
+    }
+}
+
+@media (hover: hover) {
+    .role-information:hover {
+        background-color: var(--link-color-hover);
+        color: var(--primary-color);
     }
 }
 
@@ -93,7 +200,7 @@ th, td {
     --primary-color: #5E5653;
     --background-color: #E9E6E7;
     --link-color: #697fa1;
-    --link-color-hover: #AB978C;
+    --link-color-hover: #EDD5C8;
     --link-color-visited: #7B7F8A;
     --font: 'Inter', sans-serif;
     --font-weight-body: 400;
@@ -101,4 +208,7 @@ th, td {
     --font-weight-nav: 600;
     --font-weight-footer: 300;
     --font-size-body: 1rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
 }
