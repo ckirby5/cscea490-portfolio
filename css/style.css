@@ -17,6 +17,16 @@ nav {
     font-weight: var(--font-weight-nav);
 }
 
+nav a:link,
+nav a:visited {
+    color: var(--background-color);
+}
+
+nav a:hover,
+nav a:active {
+    color: var(--link-color-hover);
+}
+
 footer {
     background-color: var(--primary-color);
     color: var(--background-color);
@@ -82,7 +92,7 @@ th, td {
 :root {
     --primary-color: #5E5653;
     --background-color: #E9E6E7;
-    --link-color: #4F5F79;
+    --link-color: #697fa1;
     --link-color-hover: #AB978C;
     --link-color-visited: #7B7F8A;
     --font: 'Inter', sans-serif;
